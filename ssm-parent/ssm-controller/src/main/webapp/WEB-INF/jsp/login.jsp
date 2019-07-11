@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+	
+<% String basePath=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath();
+	%>
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Bootstrap 4, from LayoutIt!</title>
 
-<link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="../static/bootstrap/css/style.css" rel="stylesheet">
+<link href="<%=basePath %>/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=basePath %>/static/bootstrap/css/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -46,8 +49,8 @@ ${msg }
 		</div>
 	</div>
 
-	<script src="../static/bootstrap/js/jquery.min.js"></script>
-	<script src="../static/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../static/bootstrap/js/scripts.js"></script>
+	<script src="<%=basePath %>/static/bootstrap/js/jquery.min.js"></script>
+	<script src="<%=basePath %>/static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<%=basePath %>/static/bootstrap/js/scripts.js"></script>
 </body>
 </html>
